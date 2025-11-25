@@ -13,4 +13,23 @@ package exercises.shopping_app;
  */
 public class ShoppingItem implements Comparable<ShoppingItem> {
     //TODO
+     private String aisle;
+     private String name;
+     ShoppingItem(String aisle, String name) {
+        this.aisle = aisle;
+        this.name = name;
+     }
+     public String getAisle() { return aisle; }
+     public String getName() { return name; }
+     @Override
+    public String toString() { return "Aisle " + aisle + ": " + name; }
+    @Override
+     public int compareTo(ShoppingItem other) {
+
+        int aisleComparison = this.aisle.compareTo(other.aisle);
+        if (aisleComparison != 0) {
+            return aisleComparison;
+        }
+        return this.name.compareToIgnoreCase(other.name);
+    }
 }
