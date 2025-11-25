@@ -1,0 +1,34 @@
+🛒 ShoppingList App – README
+📖 Purpose
+This project demonstrates how to build a simple ShoppingList App in Java using the List ADT. The app manages grocery items, keeps them sorted by aisle and name, and allows users to “shop” items one by one.
+The assignment highlights the importance of programming to an interface and the benefits of abstract data types (ADTs) in software design.
+
+🌟 Key Concepts Illustrated
+1. Programming to an Interface
+- The app is written against ListInterface<ShoppingItem> rather than a specific implementation.
+- This means the code does not depend on whether the list is array‑based or linked‑based.
+- Switching implementations requires changing only one line:
+shoppingList = new ArrayBasedList<>();
+// or
+shoppingList = new LinkedBasedList<>();
+- This flexibility shows how interfaces decouple what the program does from how it is done.
+2. Using the List ADT as an Abstraction
+- The List ADT defines operations like add, get, remove
+2. Using the List ADT as an Abstraction
+- The List ADT defines operations like add, get, remove, and iteration, without exposing internal details.
+- The app maintains sorted order using only these abstract operations.
+- Whether items are stored in arrays or linked nodes is hidden behind the ADT.
+- This abstraction allows:
+- Cleaner, more maintainable code.
+- Easier reasoning about correctness.
+- Freedom to optimize or swap implementations later.
+🧩 Why It Matters
+- Encapsulation: Implementation details (array vs. linked list) are hidden, reducing complexity.
+- Flexibility: Developers can switch data structures without rewriting application logic.
+- Reusability: Code written against interfaces can be reused in different contexts.
+- Scalability: Abstract design makes it easier to extend functionality (e.g., adding new list types).
+✅ Conclusion
+This assignment illustrates the power of abstraction in computer science:
+- By programming to an interface, we gain flexibility and maintainability.
+- By using the List ADT, we focus on what operations are possible rather than how they are implemented.
+Together, these principles form the foundation of robust, adaptable software design.
